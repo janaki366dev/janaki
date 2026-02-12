@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarePlus Hospital</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+    body { background: #f4f9fd; color: #1e2a32; line-height: 1.6; }
+
+    header { background: #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+
+    nav { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
+
+    nav h1 { color: #0a7ea4; font-size: 26px; font-weight: 700; }
+
+    nav ul { list-style: none; display: flex; gap: 24px; }
+
+    nav ul li a { text-decoration: none; color: #445b66; font-weight: 600; transition: 0.3s; }
+
+    nav ul li a:hover { color: #0a7ea4; }
+
+    .hero {
+      background: linear-gradient(120deg, rgba(10,126,164,0.75), rgba(0,180,216,0.65)),
+        url('https://images.unsplash.com/photo-1579684385127-1ef15d508118');
+      background-size: cover; background-position: center;
+      min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 20px;
+    }
+
+    .hero h2 { font-size: 48px; margin-bottom: 15px; font-weight: 700; }
+
+    .hero p { font-size: 20px; margin-bottom: 30px; opacity: 0.95; }
+
+    .btn { background: #ffffff; color: #0a7ea4; padding: 14px 28px; border: none; border-radius: 30px; cursor: pointer; font-size: 16px; font-weight: 600; transition: 0.3s; }
+
+    .btn:hover { background: #e6f7fb; transform: translateY(-2px); }
+
+    section { padding: 70px 20px; max-width: 1200px; margin: auto; }
+
+    .section-title { text-align: center; margin-bottom: 45px; font-size: 34px; color: #0a7ea4; }
+
+    .about p { text-align: center; max-width: 750px; margin: auto; color: #4b6470; font-size: 17px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+
+    .card { background: #ffffff; border-radius: 18px; box-shadow: 0 12px 30px rgba(0,0,0,0.06); padding: 24px; text-align: center; transition: 0.35s; }
+
+    .card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 18px 40px rgba(0,0,0,0.08); }
+
+    .card img { width: 100%; border-radius: 14px; margin-bottom: 16px; }
+
+    .card h3 { color: #0a7ea4; margin-bottom: 8px; }
+
+    .card p { color: #5c7682; font-size: 15px; }
+
+    .stats { background: #0a7ea4; color: white; border-radius: 20px; padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 20px; text-align: center; }
+
+    .stats h3 { font-size: 32px; margin-bottom: 5px; }
+
+    .contact form { display: grid; gap: 16px; max-width: 520px; margin: auto; }
+
+    input, textarea { padding: 13px; border-radius: 10px; border: 1px solid #cfe6ef; font-size: 14px; }
+
+    iframe { width: 100%; height: 320px; border: none; border-radius: 14px; margin-top: 30px; }
+
+    footer { background: #0a7ea4; text-align: center; padding: 22px; color: white; font-size: 14px; margin-top: 50px; }
+
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 34px; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <h1>CarePlus Hospital</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h2>Compassionate Care, Advanced Healing</h2>
+      <p>Modern treatment, trusted doctors, and 24/7 patient support.</p>
+      <button class="btn">Book Appointment</button>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">About CarePlus</h2>
+    <p>
+      CarePlus Hospital delivers world‑class healthcare with advanced technology,
+      experienced specialists, and patient‑centered compassion. Our mission is to
+      provide safe, affordable, and high‑quality treatment for every family.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Our Medical Services</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c" />
+        <h3>General Medicine</h3>
+        <p>Complete health checkups and expert physician care.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d" />
+        <h3>Emergency Care</h3>
+        <p>24/7 rapid emergency response and trauma treatment.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" />
+        <h3>Diagnostics Lab</h3>
+        <p>High‑precision tests using modern medical equipment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div><h3>25+</h3><p>Expert Doctors</p></div>
+    <div><h3>10K+</h3><p>Happy Patients</p></div>
+    <div><h3>15+</h3><p>Years Experience</p></div>
+    <div><h3>24/7</h3><p>Emergency Support</p></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact & Appointment</h2>
+
+    <form>
+      <input type="text" placeholder="Patient Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea rows="4" placeholder="Describe your concern"></textarea>
+      <button class="btn">Send Inquiry</button>
+    </form>
+
+    <iframe src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <footer>
+    © 2026 CarePlus Hospital • Caring for Life
+  </footer>
+
+</body>
+</html>
